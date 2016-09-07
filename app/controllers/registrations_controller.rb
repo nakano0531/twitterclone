@@ -5,10 +5,10 @@ class RegistrationsController < ApplicationController
 
   def create
     @user =User.new(params_user)
-
+    redirect_to tweets_url if logged_in?
     if @user.save
       login(@user.email, @user.password)
-      redirect_to root_url
+      redirect_to tweets_url
     else
       render :new
     end
