@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907131629) do
+ActiveRecord::Schema.define(version: 20160907152443) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "tweet_id",   limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "favorites", ["created_at"], name: "index_favorites_on_created_at", using: :btree
+  add_index "favorites", ["tweet_id"], name: "index_favorites_on_tweet_id", using: :btree
+  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id", using: :btree
 
   create_table "tweets", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
