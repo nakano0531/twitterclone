@@ -4,8 +4,8 @@ development:
   reconnect: false
   database: tsubuyaki_development
   pool: 5
-  username: nakano0531
-  password:meidai
+  username: root
+  password:
   host: localhost
 
 test:
@@ -14,8 +14,8 @@ test:
   reconnect: false
   database: tsubuyaki_test
   pool: 5
-  username: nakano0531
-  password:meidai
+  username: root
+  password:
   host: localhost
 
 production:
@@ -24,6 +24,6 @@ production:
   reconnect: false
   database: tsubuyaki_production
   pool: 5
-  username: nakano0531
-  password:meidai
+  username: root
+  password:
   host: localhost
